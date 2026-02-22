@@ -24,3 +24,13 @@ https://bmoney-sigma.vercel.app/records
 - 顯示每月總支出與收入
 - 顯示每日總支出與收入
   
+## 系統展示
+### 記錄頁面
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/da239ab1-ab58-48b0-89a3-7625e28588c7" />
+
+### 新增記錄
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/a6798b56-f8a3-4eef-b6b4-5651d3f613b4" />
+
+### 記錄資料
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/56f825f2-3ffc-45f6-a278-f2b7cc084983" />
+
