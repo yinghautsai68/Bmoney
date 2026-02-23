@@ -32,6 +32,9 @@ const Savings = () => {
         onLoad()
     }, [])
 
+    //
+    const sortedGoals = [...goals].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+
     const [isBudgetFormOpen, setIsBudgetFormOpen] = useState(false)
     const handleAddGoal = async (e) => {
         e.preventDefault()
@@ -77,7 +80,7 @@ const Savings = () => {
                     </div>
                     {/*Right Side - List Items*/}
                     <div className='h-[90%] overflow-y-auto hide-scrollbar'>
-                        {goals.map((item, index) => {
+                        {sortedGoals.map((item, index) => {
                             return (
                                 <SavingsItem key={index} createdAt={item.createdAt} goalName={item.goalName} goalAmount={item.goalAmount} />
                             )

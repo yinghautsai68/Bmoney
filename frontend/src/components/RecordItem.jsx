@@ -13,8 +13,6 @@ const RecordItem = ({ record }) => {
     const formatTime = (date) => {
         //handleEmpty
         if (!date) return ""
-
-
         const datetime = new Date(date)
         const hours = datetime.getHours()
         const minutes = datetime.getMinutes().toString().padStart(2, "0")

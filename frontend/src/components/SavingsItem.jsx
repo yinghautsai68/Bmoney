@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import IconDots from '../assets/icon-dots.png'
+import { Context } from '../../context/Context'
 const SavingsItem = ({ createdAt, goalName, goalAmount }) => {
+
+    const { formatDate } = useContext(Context)
+
     return (
         <div className='grid grid-cols-[0.8fr_0.9fr_1fr_0.3fr] py-3  border-l border-r border-b-4 rounded-xl'>
-            <div className='flex flex-row justify-center items-center text-sm'>{createdAt}</div>
+            <div className='flex flex-row justify-center items-centera text-sm'>{formatDate(createdAt)}</div>
             <div className='flex flex-row justify-center items-center text-sm'>{goalName}</div>
             <div className='flex flex-row justify-center items-center text-xs'>NT$ 12,500.00/{goalAmount}</div>
             <div className='flex flex-row justify-center items-center'>
