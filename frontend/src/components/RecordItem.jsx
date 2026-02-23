@@ -14,14 +14,7 @@ const RecordItem = ({ record }) => {
         //handleEmpty
         if (!date) return ""
 
-        //Main Function
-        /*
-        const time = date.split("T")[1]
-        const hours = time.split(":")[0];
-        const minutes = time.split(":")[1]
-        const hoursNumber = Number(hours);
-        const period = hoursNumber >= 12 ? "下午" : "上午";
-        */
+
         const datetime = new Date(date)
         const hours = datetime.getHours()
         const minutes = datetime.getMinutes().toString().padStart(2, "0")

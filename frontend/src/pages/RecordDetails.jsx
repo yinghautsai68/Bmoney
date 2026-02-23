@@ -33,6 +33,23 @@ const RecordDetails = () => {
     }
     useEffect(() => { getRecordDetails() }, [])
 
+
+    const formatTime = (date) => {
+        //handleEmpty
+        if (!date) return ""
+
+
+        const datetime = new Date(date)
+        const year = datetime.getFullYear()
+        const month = datetime.getMonth() + 1
+        const day = datetime.getDate()
+        const hours = datetime.getHours()
+        const minutes = datetime.getMinutes().toString().padStart(2, "0")
+        const period = hours >= 12 ? "下午" : "上午"
+        return `${year}年${month}月${day}日 ${period}${hours}:${minutes} `
+    }
+
+
     const handleDelete = async () => {
         console.log("button clicked")
         try {
@@ -60,7 +77,7 @@ const RecordDetails = () => {
                 <div className='flex flex-row justify-center items-center w-full text-xl font-bold '>記錄仔細</div>
                 <div className='grid grid-rows-4 divide-y w-full md:w-[70%] border border-b-3'>
                     <RecordDetailsItem title={'名稱'} value={record.name} />
-                    <RecordDetailsItem title={'日期'} value={record.date} />
+                    <RecordDetailsItem title={'日期'} value={formatTime(record.date)} />
                     <div className='grid grid-cols-2 divide-x'>
                         <RecordDetailsItem title={'類型'} value={record.type} />
                         <RecordDetailsItem title={'類別'} value={record.category} />

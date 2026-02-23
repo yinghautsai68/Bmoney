@@ -140,7 +140,7 @@ const Record = () => {
             <div className='flex flex-col gap-5 w-full md:w-[70%] h-full p-5 '>
                 {/*Right Side - Month*/}
                 <div className='flex flex-row justify-between w-full h-[10%]'>
-                    <span className='flex flex-col justify-end h-full text-lg md:text-3xl font-bold '>11月 紀錄</span>
+                    <span className='flex flex-col justify-end h-full text-lg md:text-3xl font-bold '>{month}月 記帳</span>
                     <div className='flex flex-col justify-between h-full '>
                         <div className='font-semibold'><span className='text-[#999999]'>總支出:</span> <span>NT$ {monthTotalExpense}</span></div>
                         <div className='font-semibold'><span className='text-[#999999]'>總收入:</span> <span>NT$ {monthTotalIncome}</span></div>
