@@ -49,7 +49,21 @@ const RecordDetails = () => {
         return `${year}年${month}月${day}日 ${period}${hours}:${minutes} `
     }
 
+    const formatType = (type) => {
+        if (type === 'expense') {
+            return '支出'
+        } else if (type === 'income') {
+            return '收入'
+        }
+    }
 
+    const formatCategory = (category) => {
+        if (category === "food") {
+            return '食物'
+        } else if (category === "expense") {
+            return '費用'
+        }
+    }
     const handleDelete = async () => {
         console.log("button clicked")
         try {
@@ -79,8 +93,8 @@ const RecordDetails = () => {
                     <RecordDetailsItem title={'名稱'} value={record.name} />
                     <RecordDetailsItem title={'日期'} value={formatTime(record.date)} />
                     <div className='grid grid-cols-2 divide-x'>
-                        <RecordDetailsItem title={'類型'} value={record.type} />
-                        <RecordDetailsItem title={'類別'} value={record.category} />
+                        <RecordDetailsItem title={'類型'} value={formatType(record.type)} />
+                        <RecordDetailsItem title={'類別'} value={formatCategory(record.category)} />
                     </div>
                     <RecordDetailsItem title={'金額'} value={`NT$ ${record.amount}`} className={'text-red-500'} />
                 </div>
